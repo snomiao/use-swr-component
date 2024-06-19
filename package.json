@@ -1,6 +1,6 @@
 {
   "name": "use-swr-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "snomiao <snomiao@gmail.com>",
   "type": "module",
   "exports": {
