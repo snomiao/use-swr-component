@@ -10,6 +10,7 @@
   "module": "index.tsx",
   "files": [
     "*.ts",
+    "*.tsx",
     "dist"
   ],
   "scripts": {
