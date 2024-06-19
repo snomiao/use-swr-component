@@ -1,3 +1,4 @@
+'use client'
 import stringify from "json-stable-stringify";
 import md5 from "md5";
 import type { PropsWithChildren } from "react";
@@ -13,6 +14,7 @@ export default function UseSWRComponent<
   ) => Promise<ReactNode> | ReactNode,
   Error = any
 >({
+  key,
   props,
   Component,
   children,
@@ -21,7 +23,8 @@ export default function UseSWRComponent<
   Error,
   ...conf
 }: {
-  props: Props ;
+  key?: string;
+  props: Props;
   /** could be ServerComponent or ClientComponent */
   Component: Component;
   Loading?: (props: { children?: ReactNode }) => ReactNode;
@@ -33,7 +36,7 @@ export default function UseSWRComponent<
     BareFetcher<ReactNode>
   >["fallbackData"];
 } & SWRConfiguration<ReactNode, Error, BareFetcher<ReactNode>>) {
-  const key = "SWRCOMP:" + md5(stringify(props));
+  key ??= "SWRCOMP:" + md5(stringify(props));
   conf.fallbackData ??= children;
   const { data, isLoading, isValidating, error } = useSWR(
     key,
