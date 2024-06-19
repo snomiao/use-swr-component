@@ -1,15 +1,12 @@
-# main
+# use-swr-component
 
-To install dependencies:
+## Usage
 
-```bash
-bun install
+```tsx
+<UseSWRComponent
+    props={{ prop1, prop2 }}
+    Component={YourServerComponent}
+    fallbackData={<YourServerComponent {...{ prop1, prop2 }} />}
+    refreshInterval={1000}
+/>
 ```
-
-To run:
-
-```bash
-bun run index.ts
-```
-
-This project was created using `bun init` in bun v1.1.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
