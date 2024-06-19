@@ -1,0 +1,38 @@
+{
+  "name": "use-swr-component",
+  "version": "0.0.0",
+  "author": "snomiao <snomiao@gmail.com>",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "types": "./index.ts"
+  },
+  "module": "index.ts",
+  "files": [
+    "*.ts",
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build index.ts --outdir=dist",
+    "prerelease": "bun run build && bun run test",
+    "release": "bunx standard-version && git push --follow-tags && npm publish",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@types/json-stable-stringify": "^1.0.36"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.1.4",
+    "@types/jest": "^29.5.12",
+    "@types/md5": "^2.3.5",
+    "@types/react": "^18.3.3",
+    "json-stable-stringify": "^1.1.1",
+    "md5": "^2.3.0",
+    "react": "^18.3.1",
+    "swr": "^2.2.5",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
