@@ -1,4 +1,3 @@
-"use client";
 import stringify from "json-stable-stringify";
 import md5 from "md5";
 import type { PropsWithChildren } from "react";
@@ -22,7 +21,7 @@ export default function UseSWRComponent<
   Error,
   ...conf
 }: {
-  props: Props;
+  props: Props ;
   /** could be ServerComponent or ClientComponent */
   Component: Component;
   Loading?: (props: { children?: ReactNode }) => ReactNode;
