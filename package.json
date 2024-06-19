@@ -5,9 +5,9 @@
   "type": "module",
   "exports": {
     "import": "./dist/index.js",
-    "types": "./index.ts"
+    "types": "./index.tsx"
   },
-  "module": "index.ts",
+  "module": "index.tsx",
   "files": [
     "*.ts",
     "dist"
