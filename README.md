@@ -6,9 +6,9 @@ Use SWR to fetch Component in dynamic, that component could be server component 
 
 ```tsx
 <UseSWRComponent
-    props={{ prop1, prop2 }}
-    Component={YourServerComponent}
-    fallbackData={<YourServerComponent {...{ prop1, prop2 }} />}
-    refreshInterval={1000}
+  props={{ prop1, prop2 }}
+  Component={YourServerComponent}
+  fallbackData={<YourServerComponent {...{ prop1, prop2 }} />}
+  refreshInterval={1000}
 />
 ```
