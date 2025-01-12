@@ -1,13 +1,26 @@
 {
   "name": "use-swr-component",
   "version": "0.0.5",
+  "description": "Use <UseSWRComponent/> to render Component in dynamic, that component could be server component or client component.",
+  "keywords": ["swr"],
+  "homepage": "https://github.com/snomiao/use-swr-component#readme",
+  "bugs": {
+    "url": "https://github.com/snomiao/use-swr-component/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snomiao/use-swr-component.git"
+  },
+  "license": "MIT",
   "author": "snomiao <snomiao@gmail.com>",
   "type": "module",
   "exports": {
     "import": "./index.tsx",
     "types": "./index.tsx"
   },
+  "main": "index.js",
   "module": "index.tsx",
+  "types": "./index.ts",
   "files": [
     "*.ts",
     "*.tsx",
@@ -29,7 +42,7 @@
     "@types/json-stable-stringify": "^1.0.36",
     "@types/md5": "^2.3.5",
     "@types/react": "^18.3.3",
-    "typescript": "^5.4.5"
+    "typescript": "^5.0.0"
   },
   "peerDependencies": {
     "react": "^18.3.1",

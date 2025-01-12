@@ -1,5 +1,7 @@
 # use-swr-component
 
+Use SWR to fetch Component in dynamic, that component could be server component or client component.
+
 ## Usage
 
 ```tsx
