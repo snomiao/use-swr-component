@@ -36,7 +36,7 @@ export default function UseSWRComponent<
     BareFetcher<ReactNode>
   >["fallbackData"];
 } & SWRConfiguration<ReactNode, Error, BareFetcher<ReactNode>>) {
-  key ??= "SWRCOMP:" + md5(stringify(props));
+  key ??= "SWRCOMP:" + md5(stringify(props) ?? '');
   conf.fallbackData ??= children;
   const { data, isLoading, isValidating, error } = useSWR(
     key,
